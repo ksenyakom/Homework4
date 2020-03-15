@@ -5,13 +5,8 @@ public class Customer {
     String surname;
     int age;
     Adress adress;
-//    String city;
-//    String street;
-//    int houseNumber;
-//    int flatNumber;
 
     public Customer() {
-
     }
 
     public Customer(String name, String surname, int age) {
@@ -20,7 +15,24 @@ public class Customer {
         this.age = age;
     }
 
-//    public Customer(String name, String surname, int age, String city, String street, int houseNumber, int flatNumber) {
+    public Customer(String name, String surname, int age, Adress adress) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.adress = adress;
+    }
+
+    public String getFullName() {
+        String name = this.name + " " + this.surname;
+        return name;
+    }
+
+    public String getFullAdress() {
+        String adress = "г." + this.adress.city + ", ул." + this.adress.street + " " + this.adress.houseNumber + "-" + this.adress.flatNumber;
+        return adress;
+    }
+
+    //    public Customer(String name, String surname, int age, String city, String street, int houseNumber, int flatNumber) {
 //        this.name = name;
 //        this.surname = surname;
 //        this.age = age;
@@ -29,25 +41,10 @@ public class Customer {
 //        this.houseNumber = houseNumber;
 //        this.flatNumber = flatNumber;
 
-
-    public Customer(String name, String surname, int age, Adress adress) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.adress = adress;
-
-    }
-
-    public String getFullName() {
-        String name = this.name + " " + this.surname;
-        return name;
-    }
-//    public String getFullAdress() {
+    //    public String getFullAdress() {
 //        String adress = "г."+this.city+", ул."+this.street + " " + this.houseNumber + "-" + this.flatNumber;
 //        return adress;
 //    }
-    public String getFullAdress() {
-        String adress = "г." + this.adress.city + ", ул." + this.adress.street + " " + this.adress.houseNumber + "-" + this.adress.flatNumber;
-        return adress;
-    }
+
+
 }

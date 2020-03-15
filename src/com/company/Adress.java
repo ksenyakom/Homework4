@@ -7,7 +7,6 @@ public class Adress {
     int flatNumber;
 
     public Adress() {
-
     }
 
     public Adress(String city, String street, int houseNumber, int flatNumber) {

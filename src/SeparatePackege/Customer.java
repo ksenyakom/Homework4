@@ -1,10 +1,10 @@
-package com.company;
+package SeparatePackege;
 
 public class Customer {
-    String name;
-    String surname;
-    int age;
-    Adress adress;
+   public String name;
+    public String surname;
+    public int age;
+    public Address address;
 
     public Customer() {
     }
@@ -15,11 +15,11 @@ public class Customer {
         this.age = age;
     }
 
-    public Customer(String name, String surname, int age, Adress adress) {
+    public Customer(String name, String surname, int age, Address address) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.adress = adress;
+        this.address = address;
     }
 
     public String getFullName() {
@@ -27,9 +27,17 @@ public class Customer {
         return name;
     }
 
-    public String getFullAdress() {
-        String adress = "г." + this.adress.city + ", ул." + this.adress.street + " " + this.adress.houseNumber + "-" + this.adress.flatNumber;
-        return adress;
+    public String getFullAddress() {
+        String address = this.address.getFullAddress();
+        return address;
+    }
+    public String getAge(){
+        int dev = this.age%10;
+        String s = String.valueOf(this.age);
+        if (dev==0 || dev>=5) s = s+ " лет";
+        else if (dev == 1) s = s + " год";
+        else s = s + " года";
+        return s;
     }
 
     //    public Customer(String name, String surname, int age, String city, String street, int houseNumber, int flatNumber) {

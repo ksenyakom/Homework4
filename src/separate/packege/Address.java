@@ -1,4 +1,4 @@
-package SeparatePackege;
+package separate.packege;
 
 public class Address {
     String city;

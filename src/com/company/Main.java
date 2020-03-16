@@ -1,6 +1,8 @@
 package com.company;
 
 import SeparatePackege.*;
+import separate.packege.Address;
+import separate.packege.Customer;
 
 public class Main {
 

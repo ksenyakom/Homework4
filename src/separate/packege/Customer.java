@@ -1,4 +1,4 @@
-package SeparatePackege;
+package separate.packege;
 
 public class Customer {
    public String name;
@@ -28,8 +28,8 @@ public class Customer {
     }
 
     public String getFullAddress() {
-        String address = this.address.getFullAddress();
-        return address;
+        return address.getFullAddress();
+
     }
     public String getAge(){
         int dev = this.age%10;
